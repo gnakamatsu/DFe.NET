@@ -80,8 +80,8 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos
         /// </summary>
         public decimal vTribRegCBS
         {
-            get { return vTribRegCBS.Arredondar(2); }
-            set { vTribRegCBS = value.Arredondar(2); }
+            get { return _vTribRegCBS.Arredondar(2); }
+            set { _vTribRegCBS = value.Arredondar(2); }
         }
 
     }
