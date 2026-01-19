@@ -209,7 +209,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>200047 - Bares e Restaurantes</para>
     ///     <para>200048 - Hotelaria, Parques de Diversão e Parques Temáticos</para>
     ///     <para>200049 - Transporte coletivo de passageiros rodoviário, ferroviário e hidroviário</para>
-    ///     <para>200450 - Serviços de transporte aéreo regional coletivo de passageiros ou de carga</para>
+    ///     <para>200050 - Serviços de transporte aéreo regional coletivo de passageiros ou de carga</para>
     ///     <para>200051 - Agências de Turismo</para>
     ///     <para>200052 - Prestação de serviços de profissões intelectuais</para>
     ///     <para>210001 - Redutor social aplicado uma única vez na alienação de bem imóvel residencial novo</para>
@@ -242,9 +242,19 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>410019 - Exclusão da gorjeta na base de cálculo no fornecimento de alimentação</para>
     ///     <para>410020 - Exclusão do valor de intermediação na base de cálculo no fornecimento de alimentação</para>
     ///     <para>410021 - Contribuição de que trata o art. 149-A da Constituição Federal</para>
+    ///     <para>410022 - Consolidação da propriedade do bem pelo credor</para>
+    ///     <para>410023 - Alienação de bens móveis ou imóveis que tenham sido objeto de garantia em que o prestador da garantia não seja contribuinte</para>
+    ///     <para>410024 - Consolidação da propriedade do bem pelo grupo de consórcio</para>
+    ///     <para>410025 - Alienação de bem que tenha sido objeto de garantia em que o prestador da garantia não seja contribuinte</para>
+    ///     <para>410026 - Doação com anulação de crédito</para>
+    ///     <para>410027 - Exportação de serviço ou de bem imaterial</para>
+    ///     <para>410028 - Operações com bens imóveis realizadas por pessoas físicas não consideradas contribuintes</para>
+    ///     <para>410029 - Operações acobertadas somente pelo ICMS</para>
+    ///     <para>410030 - Estorno de crédito por perecimento, deteriorização, roubo, furto ou extravio.</para>
+    ///     <para>410031 - Fornecimento em período anterior ao início de vigência de incidências de CBS e IBS</para>
     ///     <para>410999 - Operações não onerosas sem previsão de tributação, não especificadas anteriormente</para>
     ///     <para>510001 - Operações, sujeitas a diferimento, com energia elétrica, relativas à geração, comercialização, distribuição e transmissão</para>
-    ///     <para>510002 - Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas destinados a produtor rural contribuinte (Anexo IX)</para>
+    ///     <para>515001 - Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas (Anexo IX)</para>
     ///     <para>550001 - Exportações de bens materiais</para>
     ///     <para>550002 - Regime de Trânsito</para>
     ///     <para>550003 - Regimes de Depósito  (art. 85)</para>
@@ -265,6 +275,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>550018 - Desoneração da aquisição de bens de capital</para>
     ///     <para>550019 - Importação de bem material por indústria incentivada para utilização na ZFM</para>
     ///     <para>550020 - Áreas de livre comércio</para>
+    ///     <para>550021 - Industrialização destinada a exportações</para>
     ///     <para>620001 - Tributação monofásica sobre combustíveis</para>
     ///     <para>620002 - Tributação monofásica com responsabilidade pela retenção sobre combustíveis</para>
     ///     <para>620003 - Tributação monofásica com tributos retidos por responsabilidade sobre combustíveis</para>
@@ -274,12 +285,17 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>800001 - Fusão, cisão ou incorporação</para>
     ///     <para>800002 - Transferência de crédito do associado, inclusive as cooperativas singulares</para>
     ///     <para>810001 - Crédito presumido sobre o valor apurado nos fornecimentos a partir da ZFM</para>
+	///     <para>811001 - Anulação de Crédito por Saídas Imunes/Isentas</para>
+	///     <para>811002 - Débitos de notas fiscais não processadas na apuração</para>
+	///     <para>811003 - Desenquadramento do Simples Nacional</para>
     ///     <para>820001 - Documento com informações de fornecimento de serviços de planos de assistência à saúde</para>
     ///     <para>820002 - Documento com informações de fornecimento de serviços de planos de assistência funerária</para>
     ///     <para>820003 - Documento com informações de fornecimento de serviços de planos de assistência à saúde de animais domésticos</para>
     ///     <para>820004 - Documento com informações de prestação de serviços de consursos de prognósticos</para>
     ///     <para>820005 - Documento com informações de alienação de bens imóveis</para>
     ///     <para>820006 - Documento com informações de fornecimento de serviços de exploração de via</para>
+	///     <para>820007 - Documento com informações de fornecimento de serviços financeiros</para>
+	///     <para>820008 - Documento com informações de fornecimento, mas com tributação realizada em fatura anterior</para>
     ///     <para>830001 - Documento com exclusão da BC da CBS e do IBS de energia elétrica fornecida pela distribuidora à UC</para>
     /// </summary>
     public enum cClassTribIS
@@ -769,8 +785,8 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         /// Serviços de transporte aéreo regional coletivo de passageiros ou de carga, observado o art. 287 da Lei Complementar nº 214, de 2025.
         /// </summary>
         [Description("Serviços de transporte aéreo regional coletivo de passageiros ou de carga")]
-        [XmlEnum("200450")]
-        CCTrib200450 = 200450,
+        [XmlEnum("200050")]
+        CCTrib200050 = 200050,
 
         /// <summary>
         /// 200051 - Agências de Turismo
@@ -1029,6 +1045,86 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib410021 = 410021,
 
         /// <summary>
+        /// 410022 - Consolidação da propriedade do bem pelo credor
+        /// Consolidação da propriedade do bem pelo credor
+        /// </summary>
+        [Description("Consolidação da propriedade do bem pelo credor")]
+        [XmlEnum("410022")]
+        CCTrib410022 = 410022,
+
+        /// <summary>
+        /// 410023 - Alienação de bens móveis ou imóveis que tenham sido objeto de garantia em que o prestador da garantia não seja contribuinte
+        /// Alienação de bens móveis ou imóveis que tenham sido objeto de garantia em que o prestador da garantia não seja contribuinte
+        /// </summary>
+        [Description("Alienação de bens móveis ou imóveis que tenham sido objeto de garantia em que o prestador da garantia não seja contribuinte")]
+        [XmlEnum("410023")]
+        CCTrib410023 = 410023,
+
+        /// <summary>
+        /// 410024 - Consolidação da propriedade do bem pelo grupo de consórcio
+        /// Consolidação da propriedade do bem pelo grupo de consórcio
+        /// </summary>
+        [Description("Consolidação da propriedade do bem pelo grupo de consórcio")]
+        [XmlEnum("410024")]
+        CCTrib410024 = 410024,
+
+        /// <summary>
+        /// 410025 - Alienação de bem que tenha sido objeto de garantia em que o prestador da garantia não seja contribuinte
+        /// Alienação de bem que tenha sido objeto de garantia em que o prestador da garantia não seja contribuinte
+        /// </summary>
+        [Description("Alienação de bem que tenha sido objeto de garantia em que o prestador da garantia não seja contribuinte")]
+        [XmlEnum("410025")]
+        CCTrib410025 = 410025,
+
+        /// <summary>
+        /// 410026 - Doação com anulação de crédito
+        /// Doação com anulação de crédito
+        /// </summary>
+        [Description("Doação com anulação de crédito")]
+        [XmlEnum("410026")]
+        CCTrib410026 = 410026,
+
+        /// <summary>
+        /// 410027 - Exportação de serviço ou de bem imaterial
+        /// Exportação de serviço ou de bem imaterial
+        /// </summary>
+        [Description("Exportação de serviço ou de bem imaterial")]
+        [XmlEnum("410027")]
+        CCTrib410027 = 410027,
+
+        /// <summary>
+        /// 410028 - Operações com bens imóveis realizadas por pessoas físicas não consideradas contribuintes
+        /// Operações com bens imóveis realizadas por pessoas físicas não consideradas contribuintes
+        /// </summary>
+        [Description("Operações com bens imóveis realizadas por pessoas físicas não consideradas contribuintes")]
+        [XmlEnum("410028")]
+        CCTrib410028 = 410028,
+
+        /// <summary>
+        /// 410029 - Operações acobertadas somente pelo ICMS
+        /// Operações acobertadas somente pelo ICMS
+        /// </summary>
+        [Description("Operações acobertadas somente pelo ICMS")]
+        [XmlEnum("410029")]
+        CCTrib410029 = 410029,
+
+        /// <summary>
+        /// 410030 - Estorno de crédito por perecimento, deteriorização, roubo, furto ou extravio.
+        /// Estorno de crédito por perecimento, deteriorização, roubo, furto ou extravio.
+        /// </summary>
+        [Description("Estorno de crédito por perecimento, deteriorização, roubo, furto ou extravio.")]
+        [XmlEnum("410030")]
+        CCTrib410030 = 410030,
+
+        /// <summary>
+        /// 410031 - Fornecimento em período anterior ao início de vigência de incidências de CBS e IBS
+        /// Fornecimento em período anterior ao início de vigência de incidências de CBS e IBS
+        /// </summary>
+        [Description("Fornecimento em período anterior ao início de vigência de incidências de CBS e IBS")]
+        [XmlEnum("410031")]
+        CCTrib410031 = 410031,
+
+        /// <summary>
         /// 410999 - Operações não onerosas sem previsão de tributação, não especificadas anteriormente
         /// Operações não onerosas sem previsão de tributação, não especificadas anteriormente, observado o art. 4º da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -1045,12 +1141,12 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib510001 = 510001,
 
         /// <summary>
-        /// 510002 - Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas destinados a produtor rural contribuinte (Anexo IX)
-        /// Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas destinados a produtor rural contribuinte, observado o art. 138 da Lei Complementar nº 214, de 2025.
+        /// 515001 - Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas (Anexo IX)
+        /// Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas (Anexo IX)
         /// </summary>
-        [Description("Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas destinados a produtor rural contribuinte (Anexo IX)")]
-        [XmlEnum("510002")]
-        CCTrib510002 = 510002,
+        [Description("Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas (Anexo IX)")]
+        [XmlEnum("515001")]
+        CCTrib515001 = 515001,
 
         /// <summary>
         /// 550001 - Exportações de bens materiais
@@ -1213,6 +1309,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib550020 = 550020,
 
         /// <summary>
+        /// 550021 - Industrialização destinada a exportações
+        /// Industrialização destinada a exportações
+        /// </summary>
+        [Description("Industrialização destinada a exportações")]
+        [XmlEnum("550021")]
+        CCTrib550021 = 550021,
+
+        /// <summary>
         /// 620001 - Tributação monofásica sobre combustíveis
         /// Tributação monofásica sobre combustíveis, observados os art. 172 e   art. 179 I da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -1285,6 +1389,30 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib810001 = 810001,
 
         /// <summary>
+        /// 811001 - Anulação de Crédito por Saídas Imunes/Isentas
+        /// Anulação de Crédito por Saídas Imunes/Isentas
+        /// </summary>
+        [Description("Anulação de Crédito por Saídas Imunes/Isentas")]
+        [XmlEnum("811001")]
+        CCTrib811001 = 811001,
+
+        /// <summary>
+        /// 811002 - Débitos de notas fiscais não processadas na apuração
+        /// Débitos de notas fiscais não processadas na apuração
+        /// </summary>
+        [Description("Débitos de notas fiscais não processadas na apuração")]
+        [XmlEnum("811002")]
+        CCTrib811002 = 811002,
+
+        /// <summary>
+        /// 811003 - Desenquadramento do Simples Nacional
+        /// Desenquadramento do Simples Nacional
+        /// </summary>
+        [Description("Desenquadramento do Simples Nacional")]
+        [XmlEnum("811003")]
+        CCTrib811003 = 811003,
+
+        /// <summary>
         /// 820001 - Documento com informações de fornecimento de serviços de planos de assistência à saúde
         /// Documento com informações de fornecimento de serviços de planos de assinstência à saúde, mas com tributação realizada por outro meio, observado o art. 235 da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -1331,6 +1459,22 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         [Description("Documento com informações de fornecimento de serviços de exploração de via")]
         [XmlEnum("820006")]
         CCTrib820006 = 820006,
+
+        /// <summary>
+        /// 820007 - Documento com informações de fornecimento de serviços financeiros
+        /// Documento com informações de fornecimento de serviços financeiros
+        /// </summary>
+        [Description("Documento com informações de fornecimento de serviços financeiros")]
+        [XmlEnum("820007")]
+        CCTrib820007 = 820007,
+
+        /// <summary>
+        /// 820008 - Documento com informações de fornecimento, mas com tributação realizada em fatura anterior
+        /// Documento com informações de fornecimento, mas com tributação realizada em fatura anterior
+        /// </summary>
+        [Description("Documento com informações de fornecimento, mas com tributação realizada em fatura anterior")]
+        [XmlEnum("820008")]
+        CCTrib820008 = 820008,
 
         /// <summary>
         /// 830001 - Documento com exclusão da BC da CBS e do IBS de energia elétrica fornecida pela distribuidora à UC
