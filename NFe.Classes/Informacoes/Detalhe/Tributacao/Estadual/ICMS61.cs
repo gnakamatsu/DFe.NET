@@ -35,9 +35,11 @@ using System.Xml.Serialization;
 
 namespace NFe.Classes.Informacoes.Detalhe.Tributacao.Estadual
 {
-    public class ICMS40 : ICMSBasico
+    public class ICMS61 : ICMSBasico
     {
-        private decimal? _vIcmsDeson;
+        private decimal? _qBCMonoRet;
+        private decimal? _adRemICMSRet;
+        private decimal? _vICMSMonoRet;
 
         /// <summary>
         ///     N11 - Origem da Mercadoria
@@ -52,41 +54,39 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.Estadual
         public Csticms CST { get; set; }
 
         /// <summary>
-        ///     N27a - Valor do ICMS desonerado
+        ///     N43a - Quantidade tributada retida anteriormente
         /// </summary>
         [XmlElement(Order = 3)]
-        public decimal? vICMSDeson
+        public decimal? qBCMonoRet
         {
-            get { return _vIcmsDeson.Arredondar(2); }
-            set { _vIcmsDeson = value.Arredondar(2); }
+            get { return _qBCMonoRet.Arredondar(4); }
+            set { _qBCMonoRet = value.Arredondar(4); }
+        }
+
+        public bool ShouldSerializeqBCMonoRet()
+        {
+            return qBCMonoRet.HasValue;
         }
 
         /// <summary>
-        ///     N28 - Motivo da desoneração do ICMS
+        ///     N44 - Alíquota ad rem do imposto retido anteriormente
         /// </summary>
         [XmlElement(Order = 4)]
-        public MotivoDesoneracaoIcms? motDesICMS { get; set; }
-        
+        public decimal? adRemICMSRet
+        {
+            get { return _adRemICMSRet.Arredondar(4); }
+            set { _adRemICMSRet = value.Arredondar(4); }
+        }
+
         /// <summary>
-        /// N28b - Indica se o valor do ICMS desonerado (vICMSDeson) deduz 
-        /// do valor do item (vProd). (NT 2023.004) 
+        ///     N45 - Valor do ICMS retido anteriormente
         /// </summary>
         [XmlElement(Order = 5)]
-        public DeduzDesoneracaoNoProduto? indDeduzDeson { get; set; }
-
-        public bool ShouldSerializevICMSDeson()
+        public decimal? vICMSMonoRet
         {
-            return vICMSDeson.HasValue;
+            get { return _vICMSMonoRet.Arredondar(2); }
+            set { _vICMSMonoRet = value.Arredondar(2); }
         }
 
-        public bool ShouldSerializemotDesICMS()
-        {
-            return motDesICMS.HasValue;
-        }
-
-        public bool ShouldSerializeindDeduzDeson()
-        {
-            return indDeduzDeson.HasValue;
-        }
     }
 }

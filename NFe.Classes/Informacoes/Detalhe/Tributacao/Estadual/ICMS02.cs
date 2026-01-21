@@ -35,9 +35,11 @@ using System.Xml.Serialization;
 
 namespace NFe.Classes.Informacoes.Detalhe.Tributacao.Estadual
 {
-    public class ICMS40 : ICMSBasico
+    public class ICMS02 : ICMSBasico
     {
-        private decimal? _vIcmsDeson;
+        private decimal? _qBCMono;
+        private decimal _adRemICMS;
+        private decimal _vICMSMono;
 
         /// <summary>
         ///     N11 - Origem da Mercadoria
@@ -52,41 +54,39 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.Estadual
         public Csticms CST { get; set; }
 
         /// <summary>
-        ///     N27a - Valor do ICMS desonerado
+        ///     N37a - Quantidade tributada
         /// </summary>
         [XmlElement(Order = 3)]
-        public decimal? vICMSDeson
+        public decimal? qBCMono
         {
-            get { return _vIcmsDeson.Arredondar(2); }
-            set { _vIcmsDeson = value.Arredondar(2); }
+            get { return _qBCMono.Arredondar(4); }
+            set { _qBCMono = value.Arredondar(4); }
+        }
+
+        public bool ShouldSerializeqBCMono()
+        {
+            return qBCMono.HasValue;
         }
 
         /// <summary>
-        ///     N28 - Motivo da desoneração do ICMS
+        ///     N38 - Alíquota ad rem do imposto
         /// </summary>
         [XmlElement(Order = 4)]
-        public MotivoDesoneracaoIcms? motDesICMS { get; set; }
-        
+        public decimal adRemICMS
+        {
+            get { return _adRemICMS.Arredondar(4); }
+            set { _adRemICMS = value.Arredondar(4); }
+        }
+                
         /// <summary>
-        /// N28b - Indica se o valor do ICMS desonerado (vICMSDeson) deduz 
-        /// do valor do item (vProd). (NT 2023.004) 
+        ///     N39 - Valor do ICMS próprio
         /// </summary>
         [XmlElement(Order = 5)]
-        public DeduzDesoneracaoNoProduto? indDeduzDeson { get; set; }
-
-        public bool ShouldSerializevICMSDeson()
+        public decimal vICMSMono
         {
-            return vICMSDeson.HasValue;
+            get { return _vICMSMono.Arredondar(2); }
+            set { _vICMSMono = value.Arredondar(2); }
         }
 
-        public bool ShouldSerializemotDesICMS()
-        {
-            return motDesICMS.HasValue;
-        }
-
-        public bool ShouldSerializeindDeduzDeson()
-        {
-            return indDeduzDeson.HasValue;
-        }
     }
 }
