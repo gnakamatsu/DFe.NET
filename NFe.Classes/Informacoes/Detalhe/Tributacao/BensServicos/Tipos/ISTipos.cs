@@ -16,10 +16,12 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>400 - Isenção</para>
     ///     <para>410 - Imunidade e não incidência</para>
     ///     <para>510 - Diferimento</para>
+    ///     <para>515 - Diferimento com redução de alíquota</para>
     ///     <para>550 - Suspensão</para>
     ///     <para>620 - Tributação monofásica</para>
     ///     <para>800 - Transferência de crédito</para>
-    ///     <para>810 - Ajustes</para>
+    ///     <para>810 - Ajuste de IBS na ZFM</para>
+    ///     <para>811 - Ajustes</para>
     ///     <para>820 - Tributação em declaração de regime específico</para>
     ///     <para>830 - Exclusão de base de cálculo</para>
     /// </summary>
@@ -42,105 +44,119 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         /// <summary>
         /// 011 - Tributação com alíquotas uniformes reduzidas
         /// </summary>
-        [Description("'Tributação com alíquotas uniformes reduzidas")]
+        [Description("Tributação com alíquotas uniformes reduzidas")]
         [XmlEnum("011")]
         Cst011 = 011,
 
         /// <summary>
         /// 200 - Alíquota reduzida
         /// </summary>
-        [Description("'Alíquota reduzida")]
+        [Description("Alíquota reduzida")]
         [XmlEnum("200")]
         Cst200 = 200,
 
         /// <summary>
         /// 210 - Redução de alíquota com redutor de base de cálculo
         /// </summary>
-        [Description("'Redução de alíquota com redutor de base de cálculo")]
+        [Description("Redução de alíquota com redutor de base de cálculo")]
         [XmlEnum("210")]
         Cst210 = 210,
 
         /// <summary>
         /// 220 - Alíquota fixa
         /// </summary>
-        [Description("'Alíquota fixa")]
+        [Description("Alíquota fixa")]
         [XmlEnum("220")]
         Cst220 = 220,
 
         /// <summary>
         /// 221 - Alíquota fixa proporcional
         /// </summary>
-        [Description("'Alíquota fixa proporcional")]
+        [Description("Alíquota fixa proporcional")]
         [XmlEnum("221")]
         Cst221 = 221,
 
         /// <summary>
         /// 222 - Redução de base de cálculo
         /// </summary>
-        [Description("'Redução de base de cálculo")]
+        [Description("Redução de base de cálculo")]
         [XmlEnum("222")]
         Cst222 = 222,
 
         /// <summary>
         /// 400 - Isenção
         /// </summary>
-        [Description("'Isenção")]
+        [Description("Isenção")]
         [XmlEnum("400")]
         Cst400 = 400,
 
         /// <summary>
         /// 410 - Imunidade e não incidência
         /// </summary>
-        [Description("'Imunidade e não incidência")]
+        [Description("Imunidade e não incidência")]
         [XmlEnum("410")]
         Cst410 = 410,
 
         /// <summary>
         /// 510 - Diferimento
         /// </summary>
-        [Description("'Diferimento")]
+        [Description("Diferimento")]
         [XmlEnum("510")]
         Cst510 = 510,
 
         /// <summary>
+        /// 515 - Diferimento com redução de alíquota
+        /// </summary>
+        [Description("Diferimento com redução de alíquota")]
+        [XmlEnum("515")]
+        Cst515 = 515,
+
+        /// <summary>
         /// 550 - Suspensão
         /// </summary>
-        [Description("'Suspensão")]
+        [Description("Suspensão")]
         [XmlEnum("550")]
         Cst550 = 550,
 
         /// <summary>
         /// 620 - Tributação monofásica
         /// </summary>
-        [Description("'Tributação monofásica")]
+        [Description("Tributação monofásica")]
         [XmlEnum("620")]
         Cst620 = 620,
 
         /// <summary>
         /// 800 - Transferência de crédito
         /// </summary>
-        [Description("'Transferência de crédito")]
+        [Description("Transferência de crédito")]
         [XmlEnum("800")]
         Cst800 = 800,
 
         /// <summary>
-        /// 810 - Ajustes
+        /// 810 - Ajuste de IBS na ZFM
         /// </summary>
-        [Description("'Ajustes")]
+        [Description("Ajuste de IBS na ZFM")]
         [XmlEnum("810")]
         Cst810 = 810,
 
         /// <summary>
+        /// 811 - Ajustes
+        /// </summary>
+        [Description("Ajustes")]
+        [XmlEnum("811")]
+        Cst811 = 811,
+
+        /// <summary>
         /// 820 - Tributação em declaração de regime específico
         /// </summary>
-        [Description("'Tributação em declaração de regime específico")]
+        [Description("Tributação em declaração de regime específico")]
         [XmlEnum("820")]
         Cst820 = 820,
 
         /// <summary>
         /// 830 - Exclusão de base de cálculo
         /// </summary>
-        [Description("'Exclusão de base de cálculo")]
+        [Description("Exclusão de base de cálculo")]
         [XmlEnum("830")]
         Cst830 = 830,
 
