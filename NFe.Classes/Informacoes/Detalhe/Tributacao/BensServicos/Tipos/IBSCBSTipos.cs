@@ -22,7 +22,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>800 - Transferência de crédito</para>
     ///     <para>810 - Ajuste de IBS na ZFM</para>
     ///     <para>811 - Ajustes</para>
-    ///     <para>820 - Tributação em declaração de regime específico</para>
+    ///     <para>820 - Tributação em documento específico</para>
     ///     <para>830 - Exclusão de base de cálculo</para>
     /// </summary>
     public enum CstIBSCBS
@@ -147,9 +147,9 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         Cst811 = 811,
 
         /// <summary>
-        /// 820 - Tributação em declaração de regime específico
+        /// 820 - Tributação em documento específico
         /// </summary>
-        [Description("Tributação em declaração de regime específico")]
+        [Description("Tributação em documento específico")]
         [XmlEnum("820")]
         Cst820 = 820,
 
@@ -175,18 +175,18 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>011003 - Intermediação de planos de assistência à saúde</para>
     ///     <para>011004 - Concursos e prognósticos</para>
     ///     <para>011005 - Planos de assistência à saúde de animais domésticos</para>
-    ///     <para>200001 - Aquisições realizadas entre empresas autorizadas a operar em zonas de processamento de exportação</para>
+    ///     <para>200001 - Serviços de transporte de bens até as zonas de processamento de exportação e bens exportados a partir das zonas de processamento de exportação</para>
     ///     <para>200002 - Fornecimento ou importação para produtor rural não contribuinte ou TAC</para>
     ///     <para>200003 - Vendas de produtos destinados à alimentação humana (Anexo I)</para>
-    ///     <para>200004 - Venda de dispositivos médicos (Anexo XII)</para>
-    ///     <para>200005 - Venda de dispositivos médicos adquiridos por órgãos da administração pública (Anexo IV)</para>
+    ///     <para>200004 - Fornecimento de dispositivos médicos (Anexo XII)</para>
+    ///     <para>200005 - Fornecimento de dispositivos médicos para órgãos da administração pública e entidades de saúde imunes (Anexo IV)</para>
     ///     <para>200006 - Situação de emergência de saúde pública reconhecida pelo Poder público (Anexo XII)</para>
     ///     <para>200007 - Fornecimento dos dispositivos de acessibilidade próprios para pessoas com deficiência (Anexo XIII)</para>
     ///     <para>200008 - Fornecimento dos dispositivos de acessibilidade próprios para pessoas com deficiência adquiridos por órgãos da administração pública (Anexo V)</para>
-    ///     <para>200009 - Fornecimento de medicamentos (Anexo XIV)</para>
+    ///     <para>200009 - Fornecimento dos medicamentos registrados na Anvisa</para>
     ///     <para>200010 - Fornecimento dos medicamentos registrados na Anvisa, adquiridos por órgãos da administração pública</para>
     ///     <para>200011 - Fornecimento das composições para nutrição enteral e parenteral quando adquiridas por órgãos da administração pública (Anexo VI)</para>
-    ///     <para>200012 - Situação de emergência de saúde pública reconhecida pelo Poder público (Anexo XIV)</para>
+    ///     <para>200012 - Situação de emergência de saúde pública reconhecida pelo Poder público</para>
     ///     <para>200013 - Fornecimento de tampões higiênicos, absorventes higiênicos internos ou externos</para>
     ///     <para>200014 - Fornecimento dos produtos hortícolas, frutas e ovos (Anexo XV) </para>
     ///     <para>200015 - Venda de automóveis de passageiros de fabricação nacional adquiridos por motoristas profissionais ou pessoas com deficiência</para>
@@ -213,10 +213,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>200036 - Fornecimento de produtos agropecuários, aquícolas, pesqueiros, florestais e extrativistas vegetais in natura</para>
     ///     <para>200037 - Fornecimento de serviços ambientais de conservação ou recuperação da vegetação nativa</para>
     ///     <para>200038 - Fornecimento dos insumos agropecuários e aquícolas (Anexo IX)</para>
-    ///     <para>200039 - Fornecimento dos serviços e o licenciamento ou cessão dos direitos destinados às produções nacionais artísticas (Anexo X)</para>
+    ///     <para>200039 - Fornecimento dos bens e serviços relacionados com produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais (Anexo X)</para>
     ///     <para>200040 - Fornecimento de serviços de comunicação institucional à administração pública</para>
     ///     <para>200041 - Fornecimento de serviço de educação desportiva (art. 141. I)</para>
-    ///     <para>200042 - Fornecimento de serviço de educação desportiva(art. 141. II)</para>
+    ///     <para>200042 - Fornecimento de serviço de gestão e exploração do desporto (art. 141. II)</para>
     ///     <para>200043 - Fornecimento à administração pública dos serviços e dos bens relativos à soberania(Anexo XI)</para>
     ///     <para>200044 - Operações e prestações de serviços de segurança da informação e segurança cibernética desenvolvidos por sociedade que tenha sócio brasileiro(Anexo XI)</para>
     ///     <para>200045 - Operações relacionadas a projetos de reabilitação urbana de zonas históricas e de áreas críticas de recuperação e reconversão urbanística</para>
@@ -227,6 +227,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>200050 - Serviços de transporte aéreo regional coletivo de passageiros ou de carga</para>
     ///     <para>200051 - Agências de Turismo</para>
     ///     <para>200052 - Prestação de serviços de profissões intelectuais</para>
+	///     <para>200053 - Fornecimento de medicamentos registrados na Anvisa, quando  classificados como soros ou vacinas</para>
     ///     <para>210001 - Redutor social aplicado uma única vez na alienação de bem imóvel residencial novo</para>
     ///     <para>210002 - Redutor social aplicado uma única vez na alienação de lote residencial</para>
     ///     <para>210003 - Redutor social em operações de locação, cessão onerosa e arrendamento de bens imóveis de uso residencial</para>
@@ -236,13 +237,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>221001 - Locação, cessão onerosa ou arrendamento de bem imóvel com alíquota sobre a receita bruta</para>
     ///     <para>222001 - Transporte internacional de passageiros, caso os trechos de ida e volta sejam vendidos em conjunto</para>
     ///     <para>400001 - Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário</para>
+    ///     <para>400002 - Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário com medição por quilômetro rodado</para>
     ///     <para>410001 - Fornecimento de bonificações quando constem no documento fiscal e que não dependam de evento posterior</para>
     ///     <para>410002 - Transferências entre estabelecimentos pertencentes ao mesmo contribuinte</para>
     ///     <para>410003 - Doações sem contraprestação em benefício do doador</para>
     ///     <para>410004 - Exportações de bens e serviços</para>
     ///     <para>410005 - Fornecimentos realizados pela União, pelos Estados, pelo Distrito Federal e pelos Municípios</para>
     ///     <para>410006 - Fornecimentos realizados por entidades religiosas e templos de qualquer culto</para>
-    ///     <para>410007 - Fornecimentos realizados por partidos políticos</para>
+    ///     <para>410007 - Fornecimentos realizados por partidos políticos, entidades sindicais e instituições de educação e de assistência social</para>
     ///     <para>410008 - Fornecimentos de livros, jornais, periódicos e do papel destinado a sua impressão</para>
     ///     <para>410009 - Fornecimentos de fonogramas e videofonogramas musicais produzidos no Brasil</para>
     ///     <para>410010 - Fornecimentos de serviço de comunicação nas modalidades de radiodifusão sonora e de sons e imagens de recepção livre e gratuita</para>
@@ -267,8 +269,12 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>410029 - Operações acobertadas somente pelo ICMS</para>
     ///     <para>410030 - Estorno de crédito por perecimento, deteriorização, roubo, furto ou extravio.</para>
     ///     <para>410031 - Fornecimento em período anterior ao início de vigência de incidências de CBS e IBS</para>
+    ///     <para>410032 - Tributos incidentes na operação que não integram a base de cálculo do IBS e da CBS</para>
+    ///     <para>410033 - Operações de Fundos de Investimento Imobiliário (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (Fiagro)</para>
+    ///     <para>410034 - Operações de fundos de investimento</para>
+    ///     <para>410035 - Fornecimento realizado por nanoempreendedor</para>
     ///     <para>410999 - Operações não onerosas sem previsão de tributação, não especificadas anteriormente</para>
-    ///     <para>510001 - Operações, sujeitas a diferimento, com energia elétrica, relativas à geração, comercialização, distribuição e transmissão</para>
+    ///     <para>510001 - Operações, sujeitas a diferimento, com energia elétrica, relativas à importação, geração, comercialização, distribuição e transmissão</para>
     ///     <para>515001 - Operações, sujeitas a diferimento, com insumos agropecuários e aquícolas (Anexo IX)</para>
     ///     <para>550001 - Exportações de bens materiais</para>
     ///     <para>550002 - Regime de Trânsito</para>
@@ -291,6 +297,8 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>550019 - Importação de bem material por indústria incentivada para utilização na ZFM</para>
     ///     <para>550020 - Áreas de livre comércio</para>
     ///     <para>550021 - Industrialização destinada a exportações</para>
+    ///     <para>550022 - Regime Especial de Incentivos para a Produção de Hidrogênio de Baixa Emissão de Carbono (Rehidro)</para>
+    ///     <para>550023 - Operações com hidrocarbonetos líquidos derivados de petróleo não combustíveis ou de gás natural, inclusive nafta</para>
     ///     <para>620001 - Tributação monofásica sobre combustíveis</para>
     ///     <para>620002 - Tributação monofásica com responsabilidade pela retenção sobre combustíveis</para>
     ///     <para>620003 - Tributação monofásica com tributos retidos por responsabilidade sobre combustíveis</para>
@@ -311,10 +319,19 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     ///     <para>820006 - Documento com informações de fornecimento de serviços de exploração de via</para>
 	///     <para>820007 - Documento com informações de fornecimento de serviços financeiros</para>
 	///     <para>820008 - Documento com informações de fornecimento, mas com tributação realizada em fatura anterior</para>
+	///     <para>820009 - Cobrança relativa a fornecimentos declarados em outro documento</para>
     ///     <para>830001 - Documento com exclusão da BC da CBS e do IBS de energia elétrica fornecida pela distribuidora à UC</para>
     /// </summary>
     public enum cClassTribIBSCBS
     {
+        /// <summary>
+        /// 000000 - Não informado
+        /// Não é um valor oficial, mas está presente para evitar erro de serialização caso alguma nota envie este valor inadvertidamente.
+        /// </summary>
+        [Description("Não informado")]
+        [XmlEnum("000000")]
+        CCTrib000000 = 000000,
+
         /// <summary>
         /// 000001 - Situações tributadas integralmente pelo IBS e CBS.
         /// Situações tributadas integralmente pelo IBS e CBS.
@@ -404,10 +421,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib011005 = 011005,
 
         /// <summary>
-        /// 200001 - Aquisições realizadas entre empresas autorizadas a operar em zonas de processamento de exportação
-        /// Aquisições de máquinas, de aparelhos, de instrumentos, de equipamentos, de matérias-primas, de produtos intermediários e de materiais de embalagem realizadas entre empresas autorizadas a operar em zonas de processamento de exportação, observado o art. 103 da Lei Complementar nº 214, de 2025.
+        /// 200001 - Serviços de transporte de bens até as zonas de processamento de exportação e bens exportados a partir das zonas de processamento de exportação
+        /// Serviços de transporte de bens até as zonas de processamento de exportação e bens exportados a partir das zonas de processamento de exportação, observado o art. 103 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Aquisições realizadas entre empresas autorizadas a operar em zonas de processamento de exportação")]
+        [Description("Serviços de transporte de bens até as zonas de processamento de exportação e bens exportados a partir das zonas de processamento de exportação")]
         [XmlEnum("200001")]
         CCTrib200001 = 200001,
 
@@ -428,18 +445,18 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200003 = 200003,
 
         /// <summary>
-        /// 200004 - Venda de dispositivos médicos (Anexo XII)
-        /// Venda de dispositivos médicos com a especificação das respectivas classificações da NCM/SH previstas no Anexo XII da Lei Complementar nº 214, de 2025, observado o art. 144 da Lei Complementar nº 214, de 2025.
+        /// 200004 - Fornecimento de dispositivos médicos (Anexo XII)
+        /// Fornecimento de dispositivos médicos com a especificação das respectivas classificações da NCM/SH previstas no Anexo XII da Lei Complementar nº 214, de 2025, observado o art. 144 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Venda de dispositivos médicos (Anexo XII)")]
+        [Description("Fornecimento de dispositivos médicos (Anexo XII)")]
         [XmlEnum("200004")]
         CCTrib200004 = 200004,
 
         /// <summary>
-        /// 200005 - Venda de dispositivos médicos adquiridos por órgãos da administração pública (Anexo IV)
-        /// Venda de dispositivos médicos com a especificação das respectivas classificações da NCM/SH previstas no Anexo IV da Lei Complementar nº 214, de 2025, quando adquiridos por órgãos da administração pública direta, autarquias e fundações públicas, observado o art. 144 da Lei Complementar nº 214, de 2025.
+        /// 200005 - Fornecimento de dispositivos médicos para órgãos da administração pública e entidades de saúde imunes (Anexo IV)
+        /// Fornecimento de dispositivos médicos com a especificação das respectivas classificações da NCM/SH previstas no Anexo IV da Lei Complementar nº 214, de 2025, quando adquiridos por órgãos da administração pública direta, autarquias, fundações públicas e entidades de saúde imunes, observado o art. 144 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Venda de dispositivos médicos adquiridos por órgãos da administração pública (Anexo IV)")]
+        [Description("Fornecimento de dispositivos médicos para órgãos da administração pública e entidades de saúde imunes (Anexo IV)")]
         [XmlEnum("200005")]
         CCTrib200005 = 200005,
 
@@ -468,10 +485,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200008 = 200008,
 
         /// <summary>
-        /// 200009 - Fornecimento de medicamentos (Anexo XIV)
-        /// Fornecimento dos medicamentos relacionados no Anexo XIV da Lei Complementar nº 214, de 2025, com a especificação das respectivas classificações da NCM/SH, observado o art. 146 da Lei Complementar nº 214, de 2025.
+        /// 200009 - Fornecimento dos medicamentos registrados na Anvisa
+        /// Fornecimento dos medicamentos registrados na Anvisa, observado o art. 146 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Fornecimento de medicamentos (Anexo XIV)")]
+        [Description("Fornecimento dos medicamentos registrados na Anvisa")]
         [XmlEnum("200009")]
         CCTrib200009 = 200009,
 
@@ -492,10 +509,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200011 = 200011,
 
         /// <summary>
-        /// 200012 - Situação de emergência de saúde pública reconhecida pelo Poder público (Anexo XIV)
-        /// Situação de emergência de saúde pública reconhecida pelo Poder Legislativo federal, estadual, distrital ou municipal competente, ato conjunto do Ministro da Fazenda e do Comitê Gestor do IBS poderá ser editado, a qualquer momento, para incluir dispositivos não listados no Anexo XIV da Lei Complementar nº 214, de 2025, limitada a vigência do benefício ao período e à localidade da emergência de saúde pública, observado o art. 146 da Lei Complementar nº 214, de 2025.
+        /// 200012 - Situação de emergência de saúde pública reconhecida pelo Poder público
+        /// Situação de emergência de saúde pública reconhecida pelo Poder Legislativo federal, estadual, distrital ou municipal competente, ato conjunto do Ministro da Fazenda e do Comitê Gestor do IBS poderá ser editado, a qualquer momento, limitada a vigência do benefício ao período e à localidade da emergência de saúde pública, observado o art. 146 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Situação de emergência de saúde pública reconhecida pelo Poder público (Anexo XIV)")]
+        [Description("Situação de emergência de saúde pública reconhecida pelo Poder público")]
         [XmlEnum("200012")]
         CCTrib200012 = 200012,
 
@@ -549,7 +566,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
 
         /// <summary>
         /// 200019 - Importador dos serviços financeiros contribuinte
-        /// Importador dos serviços financeiros seja contribuinte que realize as operações de que tratam os incisos I a V do caput do art. 182, será aplicada alíquota zero na importação, sem prejuízo da manutenção do direito de dedução dessas despesas da base de cálculo do IBS e da CBS, segundo, observado o art. 231 da Lei Complementar nº 214, de 2025.
+        /// Importador dos serviços financeiros que seja contribuinte e tenha direito de apropriação de créditos na aquisição do mesmo serviço financeiro no País, observado o art. 231 da Lei Complementar nº 214, de 2025.
         /// </summary>
         [Description("Importador dos serviços financeiros contribuinte")]
         [XmlEnum("200019")]
@@ -653,7 +670,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
 
         /// <summary>
         /// 200032 - Fornecimento dos medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação, ressalvados os medicamentos sujeitos à alíquota zero
-        /// Fornecimento dos medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação, ressalvados os medicamentos sujeitos à alíquota zero de que trata o art. 141 da Lei Complementar nº 214, de 2025, observado o art. 133 da Lei Complementar nº 214, de 2025.
+        /// Fornecimento dos medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação, ressalvados os medicamentos sujeitos à alíquota zero de que trata o art. 146 da Lei Complementar nº 214, de 2025, observado o art. 133 da Lei Complementar nº 214, de 2025.
         /// </summary>
         [Description("Fornecimento dos medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação, ressalvados os medicamentos sujeitos à alíquota zero")]
         [XmlEnum("200032")]
@@ -708,10 +725,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200038 = 200038,
 
         /// <summary>
-        /// 200039 - Fornecimento dos serviços e o licenciamento ou cessão dos direitos destinados às produções nacionais artísticas (Anexo X)
-        /// Fornecimento dos serviços e o licenciamento ou cessão dos direitos relacionados no Anexo X da Lei Complementar nº 214, de 2025, com a especificação das respectivas classificações da NBS, quando destinados às seguintes produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais: espetáculos teatrais, circenses e de dança, shows musicais, desfiles carnavalescos ou folclóricos, eventos acadêmicos e científicos, como congressos, conferências e simpósios, feiras de negócios, exposições, feiras e mostras culturais, artísticas e literárias; programas de auditório ou jornalísticos, filmes, documentários, séries, novelas, entrevistas e clipes musicais, observado o art. 139 da Lei Complementar nº 214, de 2025.
+        /// 200039 - Fornecimento dos bens e serviços relacionados com produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais (Anexo X)
+        /// Fornecimento dos bens e serviços listados no Anexo X da Lei Complementar nº 214, de 2025, com a especificação das respectivas classificações da NCM/SH e NBS, nos casos relacionados com produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais, observado o art. 139 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Fornecimento dos serviços e o licenciamento ou cessão dos direitos destinados às produções nacionais artísticas (Anexo X)")]
+        [Description("Fornecimento dos bens e serviços relacionados com produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais (Anexo X)")]
         [XmlEnum("200039")]
         CCTrib200039 = 200039,
 
@@ -732,10 +749,10 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200041 = 200041,
 
         /// <summary>
-        /// 200042 - Fornecimento de serviço de educação desportiva (art. 141. II)
-        /// Operações relacionadas ao fornecimento de serviço de educação desportiva, classificado no código 1.2205.12.00 da NBS, observado o art. 141 da Lei Complementar nº 214, de 2025. Operações relacionadas às seguintes atividades desportivas: operações e prestações de serviços de segurança da informação e segurança cibernética, observado o art. 141 da Lei Complementar nº 214, de 2025.
+        /// 200042 - Fornecimento de serviço de gestão e exploração do desporto (art. 141. II)
+        /// Operações relacionadas às seguintes atividades desportivas: gestão e exploração do desporto por associações e clubes esportivos filiados ao órgão estadual ou federal responsável pela coordenação dos desportos, observado o art. 141 da Lei Complementar nº 214, de 2025.
         /// </summary>
-        [Description("Fornecimento de serviço de educação desportiva (art. 141. II)")]
+        [Description("Fornecimento de serviço de gestão e exploração do desporto (art. 141. II)")]
         [XmlEnum("200042")]
         CCTrib200042 = 200042,
 
@@ -820,6 +837,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib200052 = 200052,
 
         /// <summary>
+        /// 200053 - Fornecimento de medicamentos registrados na Anvisa, quando  classificados como soros ou vacinas
+        /// Fornecimento de medicamentos registrados na Anvisa, quando  classificados como soros ou vacinas, observado o art. 146 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Fornecimento de medicamentos registrados na Anvisa, quando  classificados como soros ou vacinas")]
+        [XmlEnum("200053")]
+        CCTrib200053 = 200053,
+
+        /// <summary>
         /// 210001 - Redutor social aplicado uma única vez na alienação de bem imóvel residencial novo
         /// Redutor social aplicado uma única vez na alienação de bem imóvel residencial novo, observado o art. 259 da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -890,6 +915,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         [Description("Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário")]
         [XmlEnum("400001")]
         CCTrib400001 = 400001,
+
+        /// <summary>
+        /// 400002 - Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário com medição por quilômetro rodado
+        /// Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário de caráter urbano, semiurbano e metropolitano, sob regime de autorização, permissão ou concessão pública, com medição por quilômetro rodado, observado o art. 157 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário com medição por quilômetro rodado")]
+        [XmlEnum("400002")]
+        CCTrib400002 = 400002,
 
         /// <summary>
         /// 410001 - Fornecimento de bonificações quando constem no documento fiscal e que não dependam de evento posterior
@@ -1101,7 +1134,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
 
         /// <summary>
         /// 410027 - Exportação de serviço ou de bem imaterial
-        /// Exportação de serviço ou de bem imaterial
+        /// Fornecimento de bens e serviços, desde que vinculados direta e exclusivamente à exportação de bens materiais ou associados à entrega no exterior de bens materiais, observado o art. 6º da Lei Complementar nº 214, de 2025.
         /// </summary>
         [Description("Exportação de serviço ou de bem imaterial")]
         [XmlEnum("410027")]
@@ -1140,6 +1173,38 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib410031 = 410031,
 
         /// <summary>
+        /// 410032 - Tributos incidentes na operação que não integram a base de cálculo do IBS e da CBS
+        /// Tributos incidentes na operação que não integram a base de cálculo do IBS e da CBS, observado o art. 12 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Tributos incidentes na operação que não integram a base de cálculo do IBS e da CBS")]
+        [XmlEnum("410032")]
+        CCTrib410032 = 410032,
+
+        /// <summary>
+        /// 410033 - Operações de Fundos de Investimento Imobiliário (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (Fiagro)
+        /// Operações com bens imóveis, inclusive operações com direitos reais sobre bens imóveis, realizadas por Fundos de Investimento Imobiliário (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (Fiagro), observado o art. 26 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Operações de Fundos de Investimento Imobiliário (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (Fiagro)")]
+        [XmlEnum("410033")]
+        CCTrib410033 = 410033,
+
+        /// <summary>
+        /// 410034 - Operações de fundos de investimento
+        /// Fundos de investimento cujo patrimônio seja constituído exclusivamente por aplicações em participações societárias, certificados, direitos, títulos, valores mobiliários e demais ativos financeiros permitidos pela Comissão de Valores Mobiliários, observado o art. 26 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Operações de fundos de investimento")]
+        [XmlEnum("410034")]
+        CCTrib410034 = 410034,
+
+        /// <summary>
+        /// 410035 - Fornecimento realizado por nanoempreendedor
+        /// Fornecimento realizado por nanoempreendedor, observado o art. 226 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Fornecimento realizado por nanoempreendedor")]
+        [XmlEnum("410035")]
+        CCTrib410035 = 410035,
+
+        /// <summary>
         /// 410999 - Operações não onerosas sem previsão de tributação, não especificadas anteriormente
         /// Operações não onerosas sem previsão de tributação, não especificadas anteriormente, observado o art. 4º da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -1149,7 +1214,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
 
         /// <summary>
         /// 510001 - Operações, sujeitas a diferimento, com energia elétrica, relativas à geração, comercialização, distribuição e transmissão
-        /// Operações, sujeitas a diferimento, com energia elétrica ou com direitos a ela relacionados, relativas à geração, comercialização, distribuição e transmissão, observado o art. 28 da Lei Complementar nº 214, de 2025.
+        /// Operações, sujeitas a diferimento, com energia elétrica ou com direitos a ela relacionados, relativas à importação, geração, comercialização, distribuição e transmissão, observado o art. 28 da Lei Complementar nº 214, de 2025.
         /// </summary>
         [Description("Operações, sujeitas a diferimento, com energia elétrica, relativas à geração, comercialização, distribuição e transmissão")]
         [XmlEnum("510001")]
@@ -1332,6 +1397,22 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         CCTrib550021 = 550021,
 
         /// <summary>
+        /// 550022 - Regime Especial de Incentivos para a Produção de Hidrogênio de Baixa Emissão de Carbono (Rehidro)
+        /// Regime Especial de Incentivos para a Produção de Hidrogênio de Baixa Emissão de Carbono (Rehidro),  observado o art. 106 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Regime Especial de Incentivos para a Produção de Hidrogênio de Baixa Emissão de Carbono (Rehidro)")]
+        [XmlEnum("550022")]
+        CCTrib550022 = 550022,
+
+        /// <summary>
+        /// 550023 - Operações com hidrocarbonetos líquidos derivados de petróleo não combustíveis ou de gás natural, inclusive nafta
+        /// Operações com hidrocarbonetos líquidos derivados de petróleo não combustíveis ou de gás natural, inclusive nafta, observado o art. 172 da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Operações com hidrocarbonetos líquidos derivados de petróleo não combustíveis ou de gás natural, inclusive nafta")]
+        [XmlEnum("550023")]
+        CCTrib550023 = 550023,
+
+        /// <summary>
         /// 620001 - Tributação monofásica sobre combustíveis
         /// Tributação monofásica sobre combustíveis, observados os art. 172 e   art. 179 I da Lei Complementar nº 214, de 2025.
         /// </summary>
@@ -1490,6 +1571,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         [Description("Documento com informações de fornecimento, mas com tributação realizada em fatura anterior")]
         [XmlEnum("820008")]
         CCTrib820008 = 820008,
+
+        /// <summary>
+        /// 820009 - Cobrança relativa a fornecimentos declarados em outro documento
+        /// Cobrança relativa a fornecimentos declarados em outro documento, observado o art. xxx da Lei Complementar nº 214, de 2025.
+        /// </summary>
+        [Description("Cobrança relativa a fornecimentos declarados em outro documento")]
+        [XmlEnum("820009")]
+        CCTrib820009 = 820009,
 
         /// <summary>
         /// 830001 - Documento com exclusão da BC da CBS e do IBS de energia elétrica fornecida pela distribuidora à UC
