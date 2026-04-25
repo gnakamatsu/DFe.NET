@@ -6,6 +6,7 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
     // NT2025.002
     /// <summary>
     ///     <para>000 - Tributação integral</para>
+    ///     <para>001 - desconhecido</para>
     ///     <para>010 - Tributação com alíquotas uniformes</para>
     ///     <para>011 - Tributação com alíquotas uniformes reduzidas</para>
     ///     <para>200 - Alíquota reduzida</para>
@@ -33,6 +34,14 @@ namespace NFe.Classes.Informacoes.Detalhe.Tributacao.BensServicos.Tipos
         [Description("Tributação integral")]
         [XmlEnum("000")]
         Cst000 = 000,
+
+        /// <summary>
+        /// 001 - desconhecido
+        /// não é um valor oficial, mas está presente para contornar um caso que apareceu
+        /// </summary>
+        [Description("Tributação integral")]
+        [XmlEnum("001")]
+        Cst001 = 001,
 
         /// <summary>
         /// 010 - Tributação com alíquotas uniformes
