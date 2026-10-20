@@ -403,6 +403,7 @@ namespace NFe.Classes.Informacoes.Identificacao.Tipos
     ///     <para>03 - Retorno por recusa na entrega ou por não localização do destinatário na tentativa de entrega</para>
     ///     <para>04 - Redução de valores</para>
     ///     <para>05 - Transferência de crédito na sucessão</para>
+    ///     <para>06 - Retorno por recusa parcial na entrega</para>
     /// </summary>
     public enum TipoNotaCredito
     {
@@ -423,19 +424,30 @@ namespace NFe.Classes.Informacoes.Identificacao.Tipos
         /// <summary>
         /// 03 - Retorno por recusa na entrega ou por não localização do destinatário na tentativa de entrega
         /// </summary>
-        [Description("Retorno")]
+        [Description("Retorno por recusa na entrega ou por não localização do destinatário na tentativa de entrega")]
         [XmlEnum("03")]
         tncRetorno = 3,
 
         /// <summary>
         /// 04 - Redução de valores
         /// </summary>
+        [Description("Redução de valores")]
+        [XmlEnum("04")]
         tncReducaoVal = 4,
 
         /// <summary>
         /// 05 - Transferência de crédito na sucessão
         /// </summary>
+        [Description("Transferência de crédito na sucessão")]
+        [XmlEnum("05")]
         tncTransfCred = 5,
+
+        /// <summary>
+        /// 06 - Retorno por recusa parcial na entrega
+        /// </summary>
+        [Description("Retorno por recusa parcial na entrega")]
+        [XmlEnum("06")]
+        tncRetRecusa = 6,
 
     }
 
@@ -446,6 +458,8 @@ namespace NFe.Classes.Informacoes.Identificacao.Tipos
     ///     <para>2 - Estado</para>
     ///     <para>3 - Distrito Federal</para>
     ///     <para>4 - Município</para>
+    ///     <para>5 - Consórcio Público</para>
+    ///     <para>6 - Comitê Gestor do IBS</para>
     /// </summary>
     public enum TipoEnteGov
     {
@@ -476,29 +490,59 @@ namespace NFe.Classes.Informacoes.Identificacao.Tipos
         [Description("Município")]
         [XmlEnum("4")]
         tegMunicipio = 4,
+
+        /// <summary>
+        /// 5 - Consórcio Público
+        /// </summary>
+        [Description("Consórcio Público")]
+        [XmlEnum("5")]
+        tegConsorcioPub = 5,
+
+        /// <summary>
+        /// 6 - Comitê Gestor do IBS
+        /// </summary>
+        [Description("Comitê Gestor do IBS")]
+        [XmlEnum("6")]
+        tegComiteGestorIbs = 6,
     }
 
     // NT2025.002
     /// <summary>
     ///     Tipo de operação com o ente governamental
-    ///     <para>1 - Fornecimento</para>
-    ///     <para>2 - Recebimento do pagamento, conforme fato gerador do IBS/CBS definido no Art. 10 § 2º</para>
+    ///     <para>1 – Fornecimento com pagamento posterior</para>
+    ///     <para>2 - Recebimento do pagamento com fornecimento já realizado</para>
+    ///     <para>3 – Fornecimento com pagamento já realizado</para>
+    ///     <para>4 – Recebimento do pagamento com fornecimento posterior</para>
     /// </summary>
     public enum TipoOperEnteGov
     {
         /// <summary>
-        /// 1 - Fornecimento
+        /// 1 – Fornecimento com pagamento posterior
         /// </summary>
-        [Description("Fornecimento")]
+        [Description("Fornecimento com pagamento posterior")]
         [XmlEnum("1")]
         toegFornecimento = 1,
 
         /// <summary>
-        /// 2 - Recebimento do pagamento, conforme fato gerador do IBS/CBS definido no Art. 10 § 2º
+        /// 2 - Recebimento do pagamento com fornecimento já realizado
         /// </summary>
-        [Description("Recebimento do pagamento")]
+        [Description("Recebimento do pagamento com fornecimento já realizado")]
         [XmlEnum("2")]
         toegRecebimento = 2,
+
+        /// <summary>
+        /// 3 – Fornecimento com pagamento já realizado
+        /// </summary>
+        [Description("Fornecimento com pagamento já realizado")]
+        [XmlEnum("3")]
+        toegFornecPagRealizado = 3,
+
+        /// <summary>
+        /// 4 – Recebimento do pagamento com fornecimento posterior
+        /// </summary>
+        [Description("Recebimento do pagamento com fornecimento posterior")]
+        [XmlEnum("4")]
+        toegRecebFornPosterior = 4,
     }
 
     /// <summary>
